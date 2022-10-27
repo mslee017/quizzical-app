@@ -1,38 +1,137 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  width: 800px;
+  height: 800px;
+  background-color: lightgrey;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column;
+  row-gap: 15px;
+  position: relative;
+  border-radius: 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.quiz--header {
+  font-weight: 700;
+  font-size: 32px;
+  color: #293264;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.quiz--description {
+  font-weight: 400;
+  font-size: 16px;
+  color: #293264;
+}
+
+.start--button {
+  background-color: #4d5b9e;
+  color: #f5f7fb;
+  width: 200px;
+  height: 55px;
+  border-radius: 15px;
+  font-size: 16px;
+  border: none;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.start--button:focus {
+  outline: none;
+}
+
+.start--button:active {
+  transform: scale(0.98);
+  /* Scaling button to 0.98 to its original size */
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+  /* Lowering the shadow */
+}
+
+/* INDIVIDUAL QUESTION STYLING */
+.question--container {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.question--title {
+  color: #293264;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.answer--button-container {
+  display: flex;
+  gap: 30px;
+  padding: 15px 0;
+}
+
+.answer--button {
+  border: 1px solid #4d5b9e;
+  border-radius: 12px;
+  padding: 5px 15px;
+  cursor: pointer;
+  font-size: 12px;
+  min-width: 75px;
+  min-height: 30px;
+  width: auto;
+  display: inline-block;
+}
+
+/* CHECK ANSWER BUTTON STYLING */
+.check--answers-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.check--answers,
+.play--again {
+  width: 150px;
+  background-color: #4d5b9e;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f5f7fb;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 15px;
+  display: block;
+}
+
+/* Conditional Stlyes For Buttons */
+.button-is-clicked {
+  background-color: #d6dbf5;
+}
+
+.green {
+  background-color: #94d7a2;
+}
+
+.red {
+  background-color: #f8bcbc;
+}
+
+/* COLORED BLOBS */
+.blob--yellow {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.blob--blue {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
